@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: makeBuildDir
-      run: pwd && ls && ls ..
+      run: mkdir build && pwd && ls && ls ..
     - name: cmake project generation
-      run: cmake ..
+      run: cd build && cmake ..
     - name: build
-      run: cmake --build .
+      run: cd build && cmake --build .
