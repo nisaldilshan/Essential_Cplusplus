@@ -6,6 +6,7 @@ project(Essential VERSION 0.1.0)
 
 add_subdirectory(CompileTimeAssert)
 add_subdirectory(CompileTimeStringHashing)
+add_subdirectory(ThreadLocalStorage)
 
 # set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 # set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
