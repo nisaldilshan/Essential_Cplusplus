@@ -76,8 +76,8 @@
 // int main()
 // {
 //     A a;
-//     std::thread t1(thread1func,a);
-//     std::thread t2(thread2func,a);
+//     std::thread t1(thread1func,std::ref(a));
+//     std::thread t2(thread2func,std::ref(a));
 //     t1.join();
 //     t2.join();
 //     a.print("End Main : ");
@@ -119,9 +119,9 @@ void thread2func(A& a)
 int main()
 {
     A a;
-    std::thread t1(thread1func,a); 
+    std::thread t1(thread1func,std::ref(a)); 
     t1.join();
-    std::thread t2(thread2func,a);
+    std::thread t2(thread2func,std::ref(a));
     t2.join();
     return 0;
 }
